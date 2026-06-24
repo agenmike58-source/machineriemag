@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Équipements & capacités — Machinerie MAG Ltée, Drummondville</title>
+  <meta name="description" content="Parc machines de Machinerie MAG : centres CNC 3-4 axes, tours, fraiseuses, poste de soudure, inspection CMM. Tolérance ±0,01 mm. Acier, aluminium, inox, laiton.">
+  <link rel="canonical" href="https://www.machineriemag.com/equipements.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#0f1115">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.machineriemag.com/equipements.html">
+  <meta property="og:title" content="Équipements & capacités — Machinerie MAG Ltée">
+  <meta property="og:description" content="Parc machines complet : CNC 3-4 axes, tournage, fraisage, soudure, inspection CMM. Drummondville.">
+  <meta property="og:image" content="https://www.machineriemag.com/images/og-image.jpg">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:site_name" content="Machinerie MAG Ltée">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.machineriemag.com/equipements.html">
+  <link rel="alternate" hreflang="en-CA" href="https://www.machineriemag.com/en/equipment.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.machineriemag.com/equipements.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <style>
+    :root{
+      --bg:#ffffff; --paper:#f4f5f7; --ink:#10131a; --steel:#2b3340; --steel-2:#4a5563;
+      --line:#dfe3e8; --line-2:#c9cfd7; --accent:#e8590c; --accent-d:#c2440a; --accent-soft:#fdecdf;
+      --muted:#6a7280; --dark:#0f1115; --dark-2:#171a21;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+    .fd{font-family:'Archivo',sans-serif;}
+    .mono{font-family:'IBM Plex Mono',monospace;}
+    ::selection{background:var(--accent);color:#fff;}
+
+    /* nav */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:.3s;}
+    #nav.scrolled{box-shadow:0 1px 20px rgba(16,19,26,0.06);}
+    .nav-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;}
+    .brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.15rem;letter-spacing:-0.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+    .brand .mark{width:34px;height:34px;background:var(--ink);color:var(--accent);display:grid;place-items:center;font-weight:900;font-size:0.95rem;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%);}
+    .brand span{color:var(--accent);}
+    .nav-links{display:flex;align-items:center;gap:0.35rem;}
+    .nl{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.82rem;letter-spacing:0.01em;color:var(--steel);padding:0.5rem 0.85rem;text-decoration:none;border-radius:3px;transition:.2s;}
+    .nl:hover{color:var(--ink);background:var(--paper);}
+    .nl.active{color:var(--accent);}
+    .nav-cta{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.82rem;background:var(--accent);color:#fff;padding:0.6rem 1.1rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:.2s;margin-left:0.5rem;}
+    .nav-cta:hover{background:var(--accent-d);}
+    .lang{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;color:var(--muted);text-decoration:none;padding:0.3rem 0.4rem;border:1px solid var(--line-2);border-radius:3px;margin-left:0.5rem;}
+    .lang:hover{color:var(--ink);border-color:var(--steel);}
+    #burger{display:none;background:none;border:none;color:var(--ink);cursor:pointer;}
+    #mob{display:none;position:fixed;inset:0;z-index:99;background:var(--dark);padding:5rem 2rem;flex-direction:column;gap:0.5rem;}
+    #mob.open{display:flex;}
+    #mob a{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;text-decoration:none;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    #mob a span{color:var(--accent);}
+    @media(max-width:940px){.nav-links{display:none;}#burger{display:block;}}
+
+    /* page hero */
+    .page-hero{background:var(--dark);padding:9rem 0 5.5rem;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-4rem;top:50%;transform:translateY(-50%);width:420px;height:420px;border:1px solid rgba(232,89,12,0.15);border-radius:50%;pointer-events:none;}
+    .page-hero::before{content:'';position:absolute;right:2rem;top:50%;transform:translateY(-50%);width:260px;height:260px;border:1px solid rgba(232,89,12,0.1);border-radius:50%;pointer-events:none;}
+    .ph-tag{display:inline-flex;align-items:center;gap:0.6rem;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;}
+    .ph-tag::before{content:'';width:28px;height:2px;background:var(--accent);}
+    .ph-h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.4rem,4.8vw,4rem);line-height:1;letter-spacing:-0.03em;color:#fff;margin-bottom:1.2rem;}
+    .ph-h1 em{font-style:normal;color:var(--accent);}
+    .ph-sub{font-size:1.05rem;line-height:1.7;color:#aab1bd;max-width:560px;}
+
+    /* section frame */
+    .wrap{max-width:1280px;margin:0 auto;padding:0 2rem;}
+    section{padding:6.5rem 0;}
+    .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;}
+    .eyebrow::before{content:'';width:24px;height:2px;background:var(--accent);}
+    .s-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.05;letter-spacing:-0.02em;color:var(--ink);}
+
+    /* equipment table */
+    .eq-table{width:100%;border-collapse:collapse;margin-top:2.5rem;}
+    .eq-table thead tr{border-bottom:2px solid var(--ink);}
+    .eq-table thead th{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-weight:600;padding:0 1rem 0.9rem 0;text-align:left;}
+    .eq-table thead th:last-child{text-align:right;}
+    .eq-table tbody tr{border-bottom:1px solid var(--line);transition:.2s;}
+    .eq-table tbody tr:hover{background:var(--paper);}
+    .eq-table td{padding:1.15rem 1rem 1.15rem 0;vertical-align:middle;}
+    .eq-table td:last-child{text-align:right;}
+    .eq-cat{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);background:var(--paper);padding:0.2rem 0.5rem;border-radius:2px;white-space:nowrap;}
+    .eq-name{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.98rem;color:var(--ink);}
+    .eq-spec{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--accent);font-weight:500;}
+    .eq-detail{font-size:0.86rem;color:var(--muted);margin-top:0.25rem;}
+    @media(max-width:700px){.eq-table thead th:nth-child(3),.eq-table td:nth-child(3){display:none;}.eq-table td{padding:0.9rem 0.5rem 0.9rem 0;}}
+
+    /* capacity grid */
+    .cap-split{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+    .cap-img{border-radius:4px;overflow:hidden;aspect-ratio:4/5;position:relative;}
+    .cap-img img{width:100%;height:100%;object-fit:cover;}
+    .cap-badge{position:absolute;left:1.5rem;bottom:1.5rem;background:var(--accent);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;padding:0.7rem 1.1rem;border-radius:3px;font-size:0.82rem;letter-spacing:0.02em;}
+    @media(max-width:900px){.cap-split{grid-template-columns:1fr;gap:2.5rem;}}
+
+    /* materials */
+    #mat{background:var(--dark);color:#fff;}
+    #mat .eyebrow{color:var(--accent);}
+    #mat .s-title{color:#fff;}
+    .mat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);margin-top:2.5rem;}
+    .mat{background:var(--dark-2);padding:2rem 1.8rem;}
+    .mat-sym{font-family:'IBM Plex Mono',monospace;font-size:2.4rem;font-weight:600;color:var(--accent);line-height:1;margin-bottom:0.6rem;}
+    .mat h4{font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;color:#fff;margin-bottom:0.5rem;}
+    .mat p{font-size:0.84rem;color:#8a919d;line-height:1.55;}
+    @media(max-width:900px){.mat-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:520px){.mat-grid{grid-template-columns:1fr;}}
+
+    /* tol highlight */
+    .tol-strip{background:var(--accent-soft);border-left:3px solid var(--accent);padding:1.4rem 1.8rem;border-radius:0 4px 4px 0;margin-top:2rem;display:flex;align-items:center;gap:1.5rem;}
+    .tol-strip .big{font-family:'IBM Plex Mono',monospace;font-size:2rem;font-weight:600;color:var(--accent);white-space:nowrap;}
+    .tol-strip p{font-size:0.92rem;color:var(--steel);line-height:1.55;margin:0;}
+
+    /* capability list */
+    .cap-list{margin-top:2.2rem;display:flex;flex-direction:column;}
+    .cap-row{display:flex;justify-content:space-between;align-items:center;padding:1.15rem 0;border-bottom:1px solid var(--line);}
+    .cap-row .k{font-family:'Archivo',sans-serif;font-weight:600;font-size:1rem;color:var(--ink);display:flex;align-items:center;gap:0.8rem;}
+    .cap-row .k i{color:var(--accent);width:18px;height:18px;}
+    .cap-row .v{font-family:'IBM Plex Mono',monospace;font-size:0.85rem;color:var(--accent);}
+
+    /* cta band */
+    #cta{background:var(--ink);color:#fff;text-align:center;}
+    #cta .s-title{color:#fff;max-width:720px;margin:0 auto 1.2rem;}
+    #cta p{color:#aab1bd;max-width:540px;margin:0 auto 2.3rem;font-size:1.05rem;}
+    .btn-p{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.9rem;background:var(--accent);color:#fff;padding:0.95rem 1.8rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:.2s;}
+    .btn-p:hover{background:var(--accent-d);transform:translateY(-1px);}
+    .btn-g{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.9rem;color:#fff;padding:0.95rem 1.6rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.22);transition:.2s;}
+    .btn-g:hover{border-color:var(--accent);color:var(--accent);}
+
+    /* footer */
+    footer{background:var(--dark);color:#fff;padding:4.5rem 0 2rem;}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3rem;}
+    .foot-brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.3rem;margin-bottom:0.8rem;}
+    .foot-brand span{color:var(--accent);}
+    .foot p{color:#8a919d;font-size:0.88rem;line-height:1.6;}
+    .foot-col h5{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem;}
+    .foot-col a{display:block;color:#aab1bd;font-size:0.9rem;text-decoration:none;margin-bottom:0.6rem;transition:.2s;}
+    .foot-col a:hover{color:#fff;}
+    .foot-ct{display:flex;gap:0.6rem;color:#aab1bd;font-size:0.9rem;margin-bottom:0.8rem;align-items:flex-start;}
+    .foot-ct i{color:var(--accent);width:16px;height:16px;flex-shrink:0;margin-top:3px;}
+    .foot-bot{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:#6a7280;font-size:0.78rem;}
+    @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+
+    .reveal{opacity:0;transform:translateY(26px);}
+  </style>
+</head>
+<body>
+
+<nav id="nav"><div class="nav-in">
+  <a href="index.html" class="brand"><span class="mark">M</span>Machinerie <span>MAG</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nl">Accueil</a>
+    <a href="services.html" class="nl">Services</a>
+    <a href="equipements.html" class="nl active">Équipements</a>
+    <a href="realisations.html" class="nl">Réalisations</a>
+    <a href="a-propos.html" class="nl">À propos</a>
+    <a href="contact.html" class="nav-cta"><i data-lucide="file-text" style="width:15px;height:15px;"></i>Soumission</a>
+    <a href="en/equipment.html" class="lang">EN</a>
+  </div>
+  <button id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><i data-lucide="menu" style="width:26px;height:26px;"></i></button>
+</div></nav>
+<div id="mob">
+  <button onclick="document.getElementById('mob').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;"><i data-lucide="x" style="width:28px;height:28px;"></i></button>
+  <a href="index.html">Accueil</a><a href="services.html">Services</a><a href="equipements.html">Équipements</a>
+  <a href="realisations.html">Réalisations</a><a href="a-propos.html">À propos</a><a href="contact.html"><span>Soumission</span></a>
+  <a href="en/equipment.html" style="font-size:1rem;color:#8a919d;border:none;">English</a>
+</div>
+
+<div class="page-hero"><div class="wrap">
+  <div class="ph-tag">Parc machines</div>
+  <h1 class="ph-h1">L'équipement pour<br>tenir vos <em>tolérances.</em></h1>
+  <p class="ph-sub">Un parc machines moderne entretenu en continu. CNC 3 et 4 axes, tours, fraiseuses, poste de soudure et inspection CMM — tout sous un même toit à Drummondville.</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="eyebrow">Parc machines</div>
+  <h2 class="s-title">Inventaire des équipements</h2>
+
+  <table class="eq-table reveal">
+    <thead>
+      <tr>
+        <th>Catégorie</th>
+        <th>Équipement</th>
+        <th>Capacité principale</th>
+        <th style="text-align:right;">Spécifications</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="eq-cat">CNC</span></td>
+        <td>
+          <div class="eq-name">Centre d'usinage vertical CNC 4 axes</div>
+          <div class="eq-detail">Haas VF-4SS — table 1016 × 508 mm</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Fraisage, perçage, taraudage</td>
+        <td><span class="eq-spec">1200 × 600 × 635 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">CNC</span></td>
+        <td>
+          <div class="eq-name">Centre d'usinage vertical CNC 3 axes</div>
+          <div class="eq-detail">Mazak VCN-530C — broche 12 000 tr/min</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Aluminium, acier, inox</td>
+        <td><span class="eq-spec">762 × 508 × 508 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Tournage</span></td>
+        <td>
+          <div class="eq-name">Tour CNC 2 axes</div>
+          <div class="eq-detail">Mazak Quick Turn 250 — mandrin Ø 254 mm</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Pièces de révolution, filetage</td>
+        <td><span class="eq-spec">Ø 0–350 mm · L 800 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Tournage</span></td>
+        <td>
+          <div class="eq-name">Tour conventionnel de précision</div>
+          <div class="eq-detail">Monarch EE — entre pointes 1 500 mm</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Arbres, réparation, finition</td>
+        <td><span class="eq-spec">Ø 0–450 mm · L 1 500 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Tournage</span></td>
+        <td>
+          <div class="eq-name">Tour conventionnel léger</div>
+          <div class="eq-detail">South Bend 16" — filetages métrique / impérial</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Petites pièces, vis, bagues</td>
+        <td><span class="eq-spec">Ø 0–200 mm · L 900 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Fraisage</span></td>
+        <td>
+          <div class="eq-name">Fraiseuse conventionnelle verticale</div>
+          <div class="eq-detail">Bridgeport Series I — table 254 × 1 219 mm</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Gabarits, supports, outillage</td>
+        <td><span class="eq-spec">965 × 254 × 406 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Soudure</span></td>
+        <td>
+          <div class="eq-name">Poste de soudure TIG</div>
+          <div class="eq-detail">Lincoln Electric Precision TIG 375 — AC/DC</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Inox, aluminium, acier carbone</td>
+        <td><span class="eq-spec">375 A · épaisseur 0,5–25 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Soudure</span></td>
+        <td>
+          <div class="eq-name">Poste de soudure MIG/MAG</div>
+          <div class="eq-detail">Miller Millermatic 350P — fil 0,8–1,6 mm</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Acier doux, assemblages structuraux</td>
+        <td><span class="eq-spec">350 A · fil 0,8–1,6 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Inspection</span></td>
+        <td>
+          <div class="eq-name">Machine à mesurer tridimensionnelle (CMM)</div>
+          <div class="eq-detail">Renishaw PH10MQ — palpeur à déclenchement</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Contrôle dimensionnel final</td>
+        <td><span class="eq-spec">600 × 900 × 500 mm · ±0,003 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Découpe</span></td>
+        <td>
+          <div class="eq-name">Scie à ruban métal</div>
+          <div class="eq-detail">DoAll DS-460M — coupe à 90° et à angle</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Débit de barres et profilés</td>
+        <td><span class="eq-spec">Ø max. 460 mm</span></td>
+      </tr>
+      <tr>
+        <td><span class="eq-cat">Finition</span></td>
+        <td>
+          <div class="eq-name">Rectifieuse plane</div>
+          <div class="eq-detail">Jones &amp; Shipman 540P — électromagnétique</div>
+        </td>
+        <td style="font-size:0.88rem;color:var(--muted);">Surfaces de rectification, cotes serrées</td>
+        <td><span class="eq-spec">460 × 230 mm · Ra 0,4 µm</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div></section>
+
+<section style="padding-top:0;"><div class="wrap">
+  <div class="cap-split">
+    <div>
+      <div class="eyebrow">Résumé des capacités</div>
+      <h2 class="s-title">Ce que l'atelier<br>peut tenir.</h2>
+      <div class="tol-strip reveal">
+        <div class="big">±0,01 mm</div>
+        <p>Tolérance courante sur toutes les opérations CNC. Tolérance serrée jusqu'à ±0,003 mm disponible avec inspection CMM.</p>
+      </div>
+      <div class="cap-list">
+        <div class="cap-row reveal"><div class="k"><i data-lucide="cpu"></i>Centres CNC (3 et 4 axes)</div><div class="v">2 unités</div></div>
+        <div class="cap-row reveal"><div class="k"><i data-lucide="disc-3"></i>Tours CNC + conventionnels</div><div class="v">3 unités</div></div>
+        <div class="cap-row reveal"><div class="k"><i data-lucide="move-3d"></i>Course de fraisage max.</div><div class="v">1200 × 600 mm</div></div>
+        <div class="cap-row reveal"><div class="k"><i data-lucide="circle"></i>Tournage diamètre max.</div><div class="v">Ø 450 mm</div></div>
+        <div class="cap-row reveal"><div class="k"><i data-lucide="ruler"></i>Longueur entre pointes max.</div><div class="v">1 500 mm</div></div>
+        <div class="cap-row reveal"><div class="k"><i data-lucide="crosshair"></i>Inspection CMM — précision</div><div class="v">±0,003 mm</div></div>
+        <div class="cap-row reveal"><div class="k"><i data-lucide="flame"></i>Postes de soudure</div><div class="v">TIG + MIG</div></div>
+        <div class="cap-row reveal"><div class="k"><i data-lucide="layers"></i>Matériaux usinés</div><div class="v">4 alliages</div></div>
+      </div>
+    </div>
+    <div class="cap-img reveal">
+      <img src="images/why-precision.jpg" alt="Inspection dimensionnelle CMM en atelier" loading="lazy" width="700" height="875">
+      <div class="cap-badge">Inspection CMM incluse</div>
+    </div>
+  </div>
+</div></section>
+
+<section id="mat"><div class="wrap">
+  <div class="eyebrow">Matériaux</div>
+  <h2 class="s-title">Matériaux usinés à l'atelier</h2>
+  <p style="color:#8a919d;margin-top:0.8rem;max-width:580px;font-size:1rem;line-height:1.7;">Nous travaillons les quatre alliages les plus courants en fabrication mécanique industrielle.</p>
+  <div class="mat-grid">
+    <div class="mat reveal">
+      <div class="mat-sym">Fe</div>
+      <h4>Acier carbone &amp; allié</h4>
+      <p>1018, 4140, 4340, A36. Pièces structurales, arbres, engrenages, boulons, gabarits d'outillage.</p>
+    </div>
+    <div class="mat reveal">
+      <div class="mat-sym">Al</div>
+      <h4>Aluminium</h4>
+      <p>6061-T6, 7075-T6, 2024. Légèreté et usinabilité — composantes aérospatiales, boîtiers, plaques.</p>
+    </div>
+    <div class="mat reveal">
+      <div class="mat-sym">SS</div>
+      <h4>Acier inoxydable</h4>
+      <p>303, 304, 316L. Résistance à la corrosion pour l'alimentaire, médical et environnements agressifs.</p>
+    </div>
+    <div class="mat reveal">
+      <div class="mat-sym">Cu</div>
+      <h4>Laiton &amp; cuivre</h4>
+      <p>C360, C110. Excellente conductivité et usinabilité — raccords, bagues, composantes électriques.</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="cta"><div class="wrap">
+  <div class="eyebrow" style="justify-content:center;">Besoin de pièces précises</div>
+  <h2 class="s-title">Envoyez-nous votre plan —<br>on s'occupe du reste.</h2>
+  <p>Notre parc machines est disponible 5 jours sur 7, avec service d'urgence sur appel. Soumission gratuite sous 24 h.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="contact.html" class="btn-p"><i data-lucide="file-text" style="width:16px;height:16px;"></i>Demander une soumission</a>
+    <a href="tel:+18733000232" class="btn-g" style="border-color:rgba(255,255,255,0.3);"><i data-lucide="phone" style="width:16px;height:16px;"></i>(873) 300-0232</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Machinerie <span>MAG</span> Ltée</div>
+      <p>Atelier d'usinage de précision au service des manufacturiers du Centre-du-Québec depuis 1998. Tournage, fraisage CNC, soudure et fabrication sur mesure.</p>
+    </div>
+    <div class="foot-col"><h5>Services</h5>
+      <a href="services.html">Usinage CNC</a><a href="services.html">Tournage</a><a href="services.html">Fraisage</a><a href="services.html">Soudure</a><a href="services.html">Prototypage</a>
+    </div>
+    <div class="foot-col"><h5>Entreprise</h5>
+      <a href="a-propos.html">À propos</a><a href="equipements.html">Équipements</a><a href="realisations.html">Réalisations</a><a href="contact.html">Soumission</a>
+    </div>
+    <div class="foot-col"><h5>Coordonnées</h5>
+      <div class="foot-ct"><i data-lucide="map-pin"></i>2450, boul. Lemire,<br>Drummondville, QC J2B 8A9</div>
+      <div class="foot-ct"><i data-lucide="phone"></i><a href="tel:+18733000232" style="margin:0;">(873) 300-0232</a></div>
+      <div class="foot-ct"><i data-lucide="mail"></i><a href="mailto:info@machineriemag.com" style="margin:0;">info@machineriemag.com</a></div>
+      <div class="foot-ct"><i data-lucide="clock"></i>Lun–Ven : 7h00–16h30</div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Machinerie MAG Ltée. Tous droits réservés.</span>
+    <div style="display:flex;gap:1.5rem;"><a href="en/equipment.html" style="color:#8a919d;text-decoration:none;">English</a><a href="contact.html" style="color:#8a919d;text-decoration:none;">Contact</a></div>
+  </div>
+</div></footer>
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<script>
+  lucide.createIcons();
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+  if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('.reveal').forEach((el,i)=>gsap.fromTo(el,{opacity:0,y:26},{opacity:1,y:0,duration:.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+    gsap.from('.ph-tag',{opacity:0,y:16,duration:.6,delay:.1});
+    gsap.from('.ph-h1',{opacity:0,y:28,duration:.8,delay:.2});
+    gsap.from('.ph-sub',{opacity:0,y:18,duration:.6,delay:.4});
+  }else{document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none';});}
+</script>
+</body>
+</html>

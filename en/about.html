@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Machinerie MAG Ltée, Drummondville QC</title>
+  <meta name="description" content="Machinerie MAG Ltée — precision machine shop founded in 1998 by Marc-André Gagnon in Drummondville QC. Custom fabrication for manufacturers, Centre-du-Québec.">
+  <link rel="canonical" href="https://www.machineriemag.com/en/about.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#0f1115">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.machineriemag.com/en/about.html">
+  <meta property="og:title" content="About — Machinerie MAG Ltée">
+  <meta property="og:description" content="Family-owned shop founded in 1998, Drummondville QC. Precision machining for the manufacturing industry.">
+  <meta property="og:image" content="https://www.machineriemag.com/images/about-shop.jpg">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Machinerie MAG Ltée">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.machineriemag.com/a-propos.html">
+  <link rel="alternate" hreflang="en-CA" href="https://www.machineriemag.com/en/about.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.machineriemag.com/a-propos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <style>
+    :root{
+      --bg:#ffffff; --paper:#f4f5f7; --ink:#10131a; --steel:#2b3340; --steel-2:#4a5563;
+      --line:#dfe3e8; --line-2:#c9cfd7; --accent:#e8590c; --accent-d:#c2440a; --accent-soft:#fdecdf;
+      --muted:#6a7280; --dark:#0f1115; --dark-2:#171a21;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+    ::selection{background:var(--accent);color:#fff;}
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:.3s;}
+    #nav.scrolled{box-shadow:0 1px 20px rgba(16,19,26,0.06);}
+    .nav-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;}
+    .brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.15rem;letter-spacing:-0.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+    .brand .mark{width:34px;height:34px;background:var(--ink);color:var(--accent);display:grid;place-items:center;font-weight:900;font-size:0.95rem;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%);}
+    .brand span{color:var(--accent);}
+    .nav-links{display:flex;align-items:center;gap:0.35rem;}
+    .nl{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.82rem;color:var(--steel);padding:0.5rem 0.85rem;text-decoration:none;border-radius:3px;transition:.2s;}
+    .nl:hover{color:var(--ink);background:var(--paper);}
+    .nl.active{color:var(--accent);}
+    .nav-cta{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.82rem;background:var(--accent);color:#fff;padding:0.6rem 1.1rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:.2s;margin-left:0.5rem;}
+    .nav-cta:hover{background:var(--accent-d);}
+    .lang{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;color:var(--muted);text-decoration:none;padding:0.3rem 0.4rem;border:1px solid var(--line-2);border-radius:3px;margin-left:0.5rem;}
+    .lang:hover{color:var(--ink);border-color:var(--steel);}
+    #burger{display:none;background:none;border:none;color:var(--ink);cursor:pointer;}
+    #mob{display:none;position:fixed;inset:0;z-index:99;background:var(--dark);padding:5rem 2rem;flex-direction:column;gap:0.5rem;}
+    #mob.open{display:flex;}
+    #mob a{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;text-decoration:none;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    #mob a span{color:var(--accent);}
+    @media(max-width:940px){.nav-links{display:none;}#burger{display:block;}}
+    .page-hero{background:var(--dark);padding:9rem 0 5.5rem;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-4rem;top:50%;transform:translateY(-50%);width:420px;height:420px;border:1px solid rgba(232,89,12,0.15);border-radius:50%;pointer-events:none;}
+    .page-hero::before{content:'';position:absolute;right:2rem;top:50%;transform:translateY(-50%);width:260px;height:260px;border:1px solid rgba(232,89,12,0.1);border-radius:50%;pointer-events:none;}
+    .ph-tag{display:inline-flex;align-items:center;gap:0.6rem;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;}
+    .ph-tag::before{content:'';width:28px;height:2px;background:var(--accent);}
+    .ph-h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.4rem,4.8vw,4rem);line-height:1;letter-spacing:-0.03em;color:#fff;margin-bottom:1.2rem;}
+    .ph-h1 em{font-style:normal;color:var(--accent);}
+    .ph-sub{font-size:1.05rem;line-height:1.7;color:#aab1bd;max-width:560px;}
+    .wrap{max-width:1280px;margin:0 auto;padding:0 2rem;}
+    section{padding:6.5rem 0;}
+    .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;}
+    .eyebrow::before{content:'';width:24px;height:2px;background:var(--accent);}
+    .s-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.05;letter-spacing:-0.02em;color:var(--ink);}
+    .about-split{display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:center;}
+    .about-img{position:relative;border-radius:4px;overflow:hidden;aspect-ratio:4/5;}
+    .about-img img{width:100%;height:100%;object-fit:cover;}
+    .about-badge{position:absolute;right:1.4rem;bottom:1.4rem;background:var(--dark);color:#fff;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;padding:0.6rem 1rem;border-left:3px solid var(--accent);letter-spacing:0.06em;}
+    .about-body p{font-size:1.02rem;color:var(--muted);line-height:1.78;margin-bottom:1.2rem;}
+    .about-body p:last-child{margin-bottom:0;}
+    .about-facts{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;}
+    .fact{padding:1.4rem;border:1px solid var(--line);border-radius:4px;background:var(--paper);}
+    .fact .n{font-family:'Archivo',sans-serif;font-weight:900;font-size:2rem;color:var(--ink);line-height:1;}
+    .fact .n em{font-style:normal;color:var(--accent);}
+    .fact .l{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-top:0.35rem;}
+    @media(max-width:900px){.about-split{grid-template-columns:1fr;gap:2.5rem;}.about-img{aspect-ratio:16/10;}}
+    #mission{background:var(--dark);color:#fff;}
+    #mission .eyebrow{color:var(--accent);}
+    #mission .s-title{color:#fff;}
+    .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;margin-top:3rem;}
+    .mission-img{border-radius:4px;overflow:hidden;aspect-ratio:4/3;}
+    .mission-img img{width:100%;height:100%;object-fit:cover;}
+    .mpt{display:flex;gap:1.2rem;padding:1.4rem 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    .mpt:first-child{padding-top:0;}
+    .mpt-ic{width:40px;height:40px;background:rgba(232,89,12,0.12);border-radius:3px;display:grid;place-items:center;flex-shrink:0;}
+    .mpt-ic i{color:var(--accent);width:20px;height:20px;}
+    .mpt h4{font-family:'Archivo',sans-serif;font-weight:700;color:#fff;font-size:1rem;margin-bottom:0.3rem;}
+    .mpt p{font-size:0.88rem;color:#8a919d;line-height:1.6;margin:0;}
+    @media(max-width:900px){.mission-grid{grid-template-columns:1fr;gap:2.5rem;}}
+    .timeline{margin-top:3rem;position:relative;padding-left:2rem;}
+    .timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--line);}
+    .tl-item{position:relative;padding:0 0 2.5rem 2rem;}
+    .tl-item:last-child{padding-bottom:0;}
+    .tl-item::before{content:'';position:absolute;left:-0.45rem;top:0.3rem;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg);}
+    .tl-year{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;color:var(--accent);margin-bottom:0.3rem;}
+    .tl-item h4{font-family:'Archivo',sans-serif;font-weight:700;font-size:1rem;color:var(--ink);margin-bottom:0.25rem;}
+    .tl-item p{font-size:0.88rem;color:var(--muted);line-height:1.6;margin:0;}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;margin-top:3rem;}
+    .why{padding-top:1.5rem;border-top:2px solid var(--ink);}
+    .why i{color:var(--accent);width:26px;height:26px;margin-bottom:1rem;}
+    .why h4{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:0.5rem;color:var(--ink);}
+    .why p{font-size:0.88rem;color:var(--muted);line-height:1.6;}
+    @media(max-width:900px){.why-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:520px){.why-grid{grid-template-columns:1fr;}}
+    #cta{background:var(--ink);color:#fff;text-align:center;}
+    #cta .s-title{color:#fff;max-width:720px;margin:0 auto 1.2rem;}
+    #cta p{color:#aab1bd;max-width:540px;margin:0 auto 2.3rem;font-size:1.05rem;}
+    .btn-p{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.9rem;background:var(--accent);color:#fff;padding:0.95rem 1.8rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:.2s;}
+    .btn-p:hover{background:var(--accent-d);transform:translateY(-1px);}
+    .btn-g{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.9rem;color:#fff;padding:0.95rem 1.6rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.22);transition:.2s;}
+    .btn-g:hover{border-color:var(--accent);color:var(--accent);}
+    footer{background:var(--dark);color:#fff;padding:4.5rem 0 2rem;}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3rem;}
+    .foot-brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.3rem;margin-bottom:0.8rem;}
+    .foot-brand span{color:var(--accent);}
+    .foot p{color:#8a919d;font-size:0.88rem;line-height:1.6;}
+    .foot-col h5{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem;}
+    .foot-col a{display:block;color:#aab1bd;font-size:0.9rem;text-decoration:none;margin-bottom:0.6rem;transition:.2s;}
+    .foot-col a:hover{color:#fff;}
+    .foot-ct{display:flex;gap:0.6rem;color:#aab1bd;font-size:0.9rem;margin-bottom:0.8rem;align-items:flex-start;}
+    .foot-ct i{color:var(--accent);width:16px;height:16px;flex-shrink:0;margin-top:3px;}
+    .foot-bot{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:#6a7280;font-size:0.78rem;}
+    @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+    .reveal{opacity:0;transform:translateY(26px);}
+  </style>
+</head>
+<body>
+
+<nav id="nav"><div class="nav-in">
+  <a href="index.html" class="brand"><span class="mark">M</span>Machinerie <span>MAG</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nl">Home</a>
+    <a href="services.html" class="nl">Services</a>
+    <a href="equipment.html" class="nl">Equipment</a>
+    <a href="portfolio.html" class="nl">Portfolio</a>
+    <a href="about.html" class="nl active">About</a>
+    <a href="contact.html" class="nav-cta"><i data-lucide="file-text" style="width:15px;height:15px;"></i>Get a Quote</a>
+    <a href="../a-propos.html" class="lang">FR</a>
+  </div>
+  <button id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><i data-lucide="menu" style="width:26px;height:26px;"></i></button>
+</div></nav>
+<div id="mob">
+  <button onclick="document.getElementById('mob').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;"><i data-lucide="x" style="width:28px;height:28px;"></i></button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="equipment.html">Equipment</a>
+  <a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html"><span>Get a Quote</span></a>
+  <a href="../a-propos.html" style="font-size:1rem;color:#8a919d;border:none;">Français</a>
+</div>
+
+<div class="page-hero"><div class="wrap">
+  <div class="ph-tag">About</div>
+  <h1 class="ph-h1">Family shop,<br><em>industrial</em> standards.</h1>
+  <p class="ph-sub">Founded in 1998 by Marc-André Gagnon in Drummondville, Machinerie MAG Ltée has served manufacturers across Centre-du-Québec with the same precision standards for 25 years.</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="about-split">
+    <div class="about-img reveal">
+      <img src="../images/about-shop.jpg" alt="Interior view of Machinerie MAG shop, Drummondville QC" width="700" height="875">
+      <div class="about-badge">Shop · Drummondville, QC</div>
+    </div>
+    <div class="about-body">
+      <div class="eyebrow">The company</div>
+      <h2 class="s-title reveal">Machinerie MAG Ltée</h2>
+      <div class="reveal">
+        <p>Machinerie MAG Ltée is a precision machine shop established in Drummondville, in the heart of Centre-du-Québec. Founded in 1998 by Marc-André Gagnon, the shop fabricates custom metal parts for manufacturers and industrial clients across the region.</p>
+        <p>The shop brings together CNC machining (3- and 4-axis), turning, milling, TIG and MIG welding, and CMM dimensional inspection under one roof. This concentration of capabilities allows the shop to take a part from drawing to delivery without subcontracting.</p>
+        <p>Machinerie MAG's clients are primarily manufacturing companies that need hard-to-find replacement parts, pre-production runs before full production, or a reliable source for their recurring machining requirements.</p>
+      </div>
+      <div class="about-facts reveal">
+        <div class="fact"><div class="n">1998<em></em></div><div class="l">Year founded</div></div>
+        <div class="fact"><div class="n">25<em>+</em></div><div class="l">Years in business</div></div>
+        <div class="fact"><div class="n">±0.01<em>mm</em></div><div class="l">Standard tolerance</div></div>
+        <div class="fact"><div class="n">6</div><div class="l">Machining disciplines</div></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="mission"><div class="wrap">
+  <div class="eyebrow">Mission</div>
+  <h2 class="s-title">Precision. Deadlines. Reliability.</h2>
+  <div class="mission-grid">
+    <div class="mission-img reveal">
+      <img src="../images/why-precision.jpg" alt="Dimensional inspection of machined parts" loading="lazy" width="700" height="525">
+    </div>
+    <div>
+      <div class="mpt reveal">
+        <div class="mpt-ic"><i data-lucide="crosshair"></i></div>
+        <div>
+          <h4>Tolerance to the hundredth</h4>
+          <p>Every part is verified by dimensional inspection. Tight tolerances are not an option here — they are the standard.</p>
+        </div>
+      </div>
+      <div class="mpt reveal">
+        <div class="mpt-ic"><i data-lucide="timer"></i></div>
+        <div>
+          <h4>Deadlines kept</h4>
+          <p>When a production line is down, every hour matters. 24-hour emergency service is available by phone.</p>
+        </div>
+      </div>
+      <div class="mpt reveal">
+        <div class="mpt-ic"><i data-lucide="wrench"></i></div>
+        <div>
+          <h4>Hard-to-find parts</h4>
+          <p>Discontinued supplier, obsolete component, out-of-production equipment — we re-make what nobody else will.</p>
+        </div>
+      </div>
+      <div class="mpt reveal">
+        <div class="mpt-ic"><i data-lucide="map-pin"></i></div>
+        <div>
+          <h4>Rooted in the region</h4>
+          <p>Drummondville, Centre-du-Québec. The shop primarily serves local manufacturers who need a reliable machining partner close by.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <div class="eyebrow">Timeline</div>
+  <h2 class="s-title reveal">Key milestones</h2>
+  <div style="max-width:620px;">
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <div class="tl-year">1998</div>
+        <h4>Machinerie MAG Ltée founded</h4>
+        <p>Marc-André Gagnon opens the shop in Drummondville with a conventional turning and milling machine inventory.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2003</div>
+        <h4>First CNC machining centre</h4>
+        <p>Acquisition of the first vertical CNC centre — transition to CNC milling for complex parts.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2009</div>
+        <h4>Welding department added</h4>
+        <p>TIG and MIG welding stations installed to offer clients a complete assembly and repair service on-site.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2015</div>
+        <h4>CMM inspection</h4>
+        <p>Acquisition of a Renishaw CMM — systematic dimensional control on every production batch.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">2019</div>
+        <h4>4-axis centre and shop expansion</h4>
+        <p>Addition of a 4-axis CNC centre and expansion of the shop floor to absorb growing manufacturing clientele.</p>
+      </div>
+      <div class="tl-item reveal">
+        <div class="tl-year">Today</div>
+        <h4>Over 25 years of service</h4>
+        <p>A complete shop — CNC 3 &amp; 4 axis, turning, milling, welding, CMM inspection — serving manufacturers across Centre-du-Québec.</p>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section style="background:var(--paper);padding:6.5rem 0;"><div class="wrap">
+  <div class="eyebrow">Why choose MAG</div>
+  <h2 class="s-title reveal">Manufacturers trust us<br>with their critical parts.</h2>
+  <div class="why-grid">
+    <div class="why reveal"><i data-lucide="crosshair"></i><h4>Guaranteed precision</h4><p>Tight tolerances to the hundredth, verified by dimensional inspection on every batch.</p></div>
+    <div class="why reveal"><i data-lucide="timer"></i><h4>Deadlines kept</h4><p>Fast turnaround and 24-hour emergency service — we know what a production stoppage costs.</p></div>
+    <div class="why reveal"><i data-lucide="users"></i><h4>Family shop</h4><p>Founded in 1998 by Marc-André Gagnon. The same expertise, machine after machine.</p></div>
+    <div class="why reveal"><i data-lucide="recycle"></i><h4>Hard-to-find parts</h4><p>We reproduce obsolete components that your suppliers no longer manufacture.</p></div>
+  </div>
+</div></section>
+
+<section id="cta"><div class="wrap">
+  <div class="eyebrow" style="justify-content:center;">Let's work together</div>
+  <h2 class="s-title">Have a machining project?<br>We're here.</h2>
+  <p>Send us your drawings or call us directly. Free quote, fast response.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="contact.html" class="btn-p"><i data-lucide="file-text" style="width:16px;height:16px;"></i>Request a Quote</a>
+    <a href="tel:+18733000232" class="btn-g" style="border-color:rgba(255,255,255,0.3);"><i data-lucide="phone" style="width:16px;height:16px;"></i>(873) 300-0232</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Machinerie <span>MAG</span> Ltée</div>
+      <p>Precision machine shop serving manufacturers across Centre-du-Québec since 1998. CNC machining, turning, milling, welding and custom fabrication.</p>
+    </div>
+    <div class="foot-col"><h5>Services</h5>
+      <a href="services.html">CNC Machining</a><a href="services.html">Turning</a><a href="services.html">Milling</a><a href="services.html">Welding</a><a href="services.html">Prototyping</a>
+    </div>
+    <div class="foot-col"><h5>Company</h5>
+      <a href="about.html">About</a><a href="equipment.html">Equipment</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Get a Quote</a>
+    </div>
+    <div class="foot-col"><h5>Contact</h5>
+      <div class="foot-ct"><i data-lucide="map-pin"></i>2450, boul. Lemire,<br>Drummondville, QC J2B 8A9</div>
+      <div class="foot-ct"><i data-lucide="phone"></i><a href="tel:+18733000232" style="margin:0;">(873) 300-0232</a></div>
+      <div class="foot-ct"><i data-lucide="mail"></i><a href="mailto:info@machineriemag.com" style="margin:0;">info@machineriemag.com</a></div>
+      <div class="foot-ct"><i data-lucide="clock"></i>Mon–Fri: 7:00 AM–4:30 PM</div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Machinerie MAG Ltée. All rights reserved.</span>
+    <div style="display:flex;gap:1.5rem;"><a href="../a-propos.html" style="color:#8a919d;text-decoration:none;">Français</a><a href="contact.html" style="color:#8a919d;text-decoration:none;">Contact</a></div>
+  </div>
+</div></footer>
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<script>
+  lucide.createIcons();
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+  if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('.reveal').forEach((el)=>gsap.fromTo(el,{opacity:0,y:26},{opacity:1,y:0,duration:.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+    gsap.from('.ph-tag',{opacity:0,y:16,duration:.6,delay:.1});
+    gsap.from('.ph-h1',{opacity:0,y:28,duration:.8,delay:.2});
+    gsap.from('.ph-sub',{opacity:0,y:18,duration:.6,delay:.4});
+  }else{document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none';});}
+</script>
+</body>
+</html>

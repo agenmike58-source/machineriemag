@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote Request & Contact — Machinerie MAG Ltée, Drummondville QC</title>
+  <meta name="description" content="Request a machining quote from Machinerie MAG: send your CAD files, sketches or sample part. Response within 24 hours. (873) 300-0232, Drummondville QC.">
+  <link rel="canonical" href="https://www.machineriemag.com/en/contact.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#0f1115">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.machineriemag.com/en/contact.html">
+  <meta property="og:title" content="Quote Request & Contact — Machinerie MAG Ltée">
+  <meta property="og:description" content="Request a machining quote. CAD files accepted. Response within 24 hours. Drummondville QC.">
+  <meta property="og:image" content="https://www.machineriemag.com/images/og-image.jpg">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Machinerie MAG Ltée">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.machineriemag.com/contact.html">
+  <link rel="alternate" hreflang="en-CA" href="https://www.machineriemag.com/en/contact.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.machineriemag.com/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <style>
+    :root{
+      --bg:#ffffff; --paper:#f4f5f7; --ink:#10131a; --steel:#2b3340; --steel-2:#4a5563;
+      --line:#dfe3e8; --line-2:#c9cfd7; --accent:#e8590c; --accent-d:#c2440a; --accent-soft:#fdecdf;
+      --muted:#6a7280; --dark:#0f1115; --dark-2:#171a21;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+    ::selection{background:var(--accent);color:#fff;}
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:.3s;}
+    #nav.scrolled{box-shadow:0 1px 20px rgba(16,19,26,0.06);}
+    .nav-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;}
+    .brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.15rem;letter-spacing:-0.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+    .brand .mark{width:34px;height:34px;background:var(--ink);color:var(--accent);display:grid;place-items:center;font-weight:900;font-size:0.95rem;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%);}
+    .brand span{color:var(--accent);}
+    .nav-links{display:flex;align-items:center;gap:0.35rem;}
+    .nl{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.82rem;color:var(--steel);padding:0.5rem 0.85rem;text-decoration:none;border-radius:3px;transition:.2s;}
+    .nl:hover{color:var(--ink);background:var(--paper);}
+    .nl.active{color:var(--accent);}
+    .nav-cta{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.82rem;background:var(--accent);color:#fff;padding:0.6rem 1.1rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:.2s;margin-left:0.5rem;}
+    .nav-cta:hover{background:var(--accent-d);}
+    .lang{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;color:var(--muted);text-decoration:none;padding:0.3rem 0.4rem;border:1px solid var(--line-2);border-radius:3px;margin-left:0.5rem;}
+    .lang:hover{color:var(--ink);border-color:var(--steel);}
+    #burger{display:none;background:none;border:none;color:var(--ink);cursor:pointer;}
+    #mob{display:none;position:fixed;inset:0;z-index:99;background:var(--dark);padding:5rem 2rem;flex-direction:column;gap:0.5rem;}
+    #mob.open{display:flex;}
+    #mob a{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;text-decoration:none;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    #mob a span{color:var(--accent);}
+    @media(max-width:940px){.nav-links{display:none;}#burger{display:block;}}
+    .page-hero{background:var(--dark);padding:9rem 0 5.5rem;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-4rem;top:50%;transform:translateY(-50%);width:420px;height:420px;border:1px solid rgba(232,89,12,0.15);border-radius:50%;pointer-events:none;}
+    .page-hero::before{content:'';position:absolute;right:2rem;top:50%;transform:translateY(-50%);width:260px;height:260px;border:1px solid rgba(232,89,12,0.1);border-radius:50%;pointer-events:none;}
+    .ph-tag{display:inline-flex;align-items:center;gap:0.6rem;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;}
+    .ph-tag::before{content:'';width:28px;height:2px;background:var(--accent);}
+    .ph-h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.4rem,4.8vw,4rem);line-height:1;letter-spacing:-0.03em;color:#fff;margin-bottom:1.2rem;}
+    .ph-h1 em{font-style:normal;color:var(--accent);}
+    .ph-sub{font-size:1.05rem;line-height:1.7;color:#aab1bd;max-width:560px;}
+    .wrap{max-width:1280px;margin:0 auto;padding:0 2rem;}
+    section{padding:6.5rem 0;}
+    .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;}
+    .eyebrow::before{content:'';width:24px;height:2px;background:var(--accent);}
+    .s-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.05;letter-spacing:-0.02em;color:var(--ink);}
+    .contact-grid{display:grid;grid-template-columns:1.1fr 0.9fr;gap:6rem;align-items:start;}
+    @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:3.5rem;}}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;}
+    @media(max-width:600px){.form-row{grid-template-columns:1fr;}}
+    .field{display:flex;flex-direction:column;gap:0.45rem;margin-bottom:1.2rem;}
+    label{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.82rem;color:var(--steel);}
+    label span{color:var(--accent);}
+    input,select,textarea{font-family:'DM Sans',sans-serif;font-size:0.95rem;color:var(--ink);background:var(--paper);border:1px solid var(--line-2);border-radius:3px;padding:0.75rem 1rem;width:100%;transition:.2s;outline:none;}
+    input:focus,select:focus,textarea:focus{border-color:var(--accent);background:#fff;box-shadow:0 0 0 3px rgba(232,89,12,0.1);}
+    input::placeholder,textarea::placeholder{color:var(--muted);}
+    textarea{resize:vertical;min-height:120px;}
+    select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236a7280' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.9rem center;}
+    .file-field{border:2px dashed var(--line-2);border-radius:3px;padding:1.4rem;text-align:center;cursor:pointer;transition:.2s;background:var(--paper);}
+    .file-field:hover{border-color:var(--accent);background:var(--accent-soft);}
+    .file-field input[type="file"]{display:none;}
+    .file-label{display:flex;flex-direction:column;align-items:center;gap:0.5rem;cursor:pointer;}
+    .file-label i{color:var(--accent);width:28px;height:28px;}
+    .file-label span{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.88rem;color:var(--steel);}
+    .file-label small{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;color:var(--muted);letter-spacing:0.04em;}
+    #file-name{font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--accent);margin-top:0.4rem;display:none;}
+    .btn-submit{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.95rem;background:var(--accent);color:#fff;padding:1rem 2rem;border-radius:3px;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:0.6rem;transition:.2s;width:100%;justify-content:center;margin-top:0.5rem;}
+    .btn-submit:hover{background:var(--accent-d);transform:translateY(-1px);}
+    #toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;font-family:'Archivo',sans-serif;font-weight:600;font-size:0.92rem;padding:1rem 1.8rem;border-radius:4px;border-left:3px solid var(--accent);z-index:300;transition:.35s;opacity:0;pointer-events:none;display:flex;align-items:center;gap:0.7rem;white-space:nowrap;}
+    #toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+    .info-panel{background:var(--paper);border-radius:4px;padding:2.4rem;border:1px solid var(--line);}
+    .info-panel h3{font-family:'Archivo',sans-serif;font-weight:800;font-size:1.3rem;color:var(--ink);margin-bottom:1.6rem;letter-spacing:-0.01em;}
+    .info-row{display:flex;gap:1rem;align-items:flex-start;padding:1rem 0;border-bottom:1px solid var(--line);}
+    .info-row:last-of-type{border-bottom:none;}
+    .info-ic{width:38px;height:38px;background:var(--accent-soft);border-radius:3px;display:grid;place-items:center;flex-shrink:0;}
+    .info-ic i{color:var(--accent);width:18px;height:18px;}
+    .info-row .lbl{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.2rem;}
+    .info-row .val{font-size:0.95rem;color:var(--ink);font-weight:500;line-height:1.5;}
+    .info-row a{color:var(--ink);text-decoration:none;}
+    .info-row a:hover{color:var(--accent);}
+    .hours-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.4rem 1.5rem;margin-top:0.2rem;}
+    .hours-grid .day{font-size:0.88rem;color:var(--muted);}
+    .hours-grid .time{font-family:'IBM Plex Mono',monospace;font-size:0.82rem;color:var(--ink);font-weight:500;}
+    .urgency-box{margin-top:1.8rem;background:var(--dark);border-radius:3px;padding:1.2rem 1.4rem;display:flex;gap:0.8rem;align-items:flex-start;}
+    .urgency-box i{color:var(--accent);width:18px;height:18px;flex-shrink:0;margin-top:2px;}
+    .urgency-box p{font-size:0.86rem;color:#aab1bd;line-height:1.55;margin:0;}
+    .urgency-box strong{color:#fff;}
+    footer{background:var(--dark);color:#fff;padding:4.5rem 0 2rem;}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3rem;}
+    .foot-brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.3rem;margin-bottom:0.8rem;}
+    .foot-brand span{color:var(--accent);}
+    .foot p{color:#8a919d;font-size:0.88rem;line-height:1.6;}
+    .foot-col h5{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem;}
+    .foot-col a{display:block;color:#aab1bd;font-size:0.9rem;text-decoration:none;margin-bottom:0.6rem;transition:.2s;}
+    .foot-col a:hover{color:#fff;}
+    .foot-ct{display:flex;gap:0.6rem;color:#aab1bd;font-size:0.9rem;margin-bottom:0.8rem;align-items:flex-start;}
+    .foot-ct i{color:var(--accent);width:16px;height:16px;flex-shrink:0;margin-top:3px;}
+    .foot-bot{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:#6a7280;font-size:0.78rem;}
+    @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+    .reveal{opacity:0;transform:translateY(26px);}
+  </style>
+</head>
+<body>
+
+<nav id="nav"><div class="nav-in">
+  <a href="index.html" class="brand"><span class="mark">M</span>Machinerie <span>MAG</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nl">Home</a>
+    <a href="services.html" class="nl">Services</a>
+    <a href="equipment.html" class="nl">Equipment</a>
+    <a href="portfolio.html" class="nl">Portfolio</a>
+    <a href="about.html" class="nl">About</a>
+    <a href="contact.html" class="nav-cta active"><i data-lucide="file-text" style="width:15px;height:15px;"></i>Get a Quote</a>
+    <a href="../contact.html" class="lang">FR</a>
+  </div>
+  <button id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><i data-lucide="menu" style="width:26px;height:26px;"></i></button>
+</div></nav>
+<div id="mob">
+  <button onclick="document.getElementById('mob').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;"><i data-lucide="x" style="width:28px;height:28px;"></i></button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="equipment.html">Equipment</a>
+  <a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html"><span>Get a Quote</span></a>
+  <a href="../contact.html" style="font-size:1rem;color:#8a919d;border:none;">Français</a>
+</div>
+
+<div class="page-hero"><div class="wrap">
+  <div class="ph-tag">Free quote</div>
+  <h1 class="ph-h1">Send your drawing —<br>we'll <em>get back to you.</em></h1>
+  <p class="ph-sub">CAD file, dimensioned sketch or sample part — our team reviews your needs and provides a free quote, usually within 24 hours.</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="contact-grid">
+
+    <div class="reveal">
+      <div class="eyebrow">Quote request</div>
+      <h2 class="s-title" style="margin-bottom:2rem;">Contact form</h2>
+
+      <form id="contact-form" novalidate>
+        <div class="form-row">
+          <div class="field">
+            <label for="nom">Name <span>*</span></label>
+            <input type="text" id="nom" name="nom" placeholder="John Smith" required>
+          </div>
+          <div class="field">
+            <label for="entreprise">Company</label>
+            <input type="text" id="entreprise" name="entreprise" placeholder="XYZ Industries">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="courriel">Email <span>*</span></label>
+            <input type="email" id="courriel" name="courriel" placeholder="john@company.ca" required>
+          </div>
+          <div class="field">
+            <label for="telephone">Phone</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="(873) 000-0000">
+          </div>
+        </div>
+        <div class="field">
+          <label for="service">Type of service <span>*</span></label>
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select a service…</option>
+            <option value="cnc">CNC Machining (3 or 4 axis)</option>
+            <option value="turning">Turning</option>
+            <option value="milling">Milling</option>
+            <option value="welding">TIG / MIG Welding</option>
+            <option value="repair">Industrial Repair</option>
+            <option value="proto">Prototyping / Pre-production</option>
+            <option value="other">Other / Multiple services</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Project description <span>*</span></label>
+          <textarea id="message" name="message" placeholder="Describe your needs: material, approximate dimensions, quantity, required tolerance, target delivery date…" required></textarea>
+        </div>
+        <div class="field">
+          <label>Drawings / CAD files</label>
+          <div class="file-field" onclick="document.getElementById('plans').click()">
+            <label class="file-label" for="plans">
+              <i data-lucide="upload-cloud"></i>
+              <span>Drag a file or click to browse</span>
+              <small>STEP · IGES · DXF · DWG · PDF · JPG — max. 20 MB</small>
+            </label>
+            <input type="file" id="plans" name="plans" accept=".step,.stp,.iges,.igs,.dxf,.dwg,.pdf,.jpg,.jpeg,.png" multiple onchange="showFileName(this)">
+          </div>
+          <div id="file-name"></div>
+        </div>
+        <button type="submit" class="btn-submit">
+          <i data-lucide="send" style="width:18px;height:18px;"></i>
+          Send request
+        </button>
+      </form>
+    </div>
+
+    <div class="reveal">
+      <div class="info-panel">
+        <h3>Contact information</h3>
+
+        <div class="info-row">
+          <div class="info-ic"><i data-lucide="map-pin"></i></div>
+          <div>
+            <div class="lbl">Address</div>
+            <div class="val">2450, boulevard Lemire<br>Drummondville, QC&nbsp;&nbsp;J2B&nbsp;8A9</div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-ic"><i data-lucide="phone"></i></div>
+          <div>
+            <div class="lbl">Phone</div>
+            <div class="val"><a href="tel:+18733000232">(873) 300-0232</a></div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-ic"><i data-lucide="mail"></i></div>
+          <div>
+            <div class="lbl">Email</div>
+            <div class="val"><a href="mailto:info@machineriemag.com">info@machineriemag.com</a></div>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-ic"><i data-lucide="clock"></i></div>
+          <div>
+            <div class="lbl">Hours of operation</div>
+            <div class="hours-grid" style="margin-top:0.4rem;">
+              <span class="day">Monday – Friday</span><span class="time">7:00 AM – 4:30 PM</span>
+              <span class="day">Saturday – Sunday</span><span class="time">Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="urgency-box">
+          <i data-lucide="zap"></i>
+          <p><strong>Emergency service available.</strong> For any production breakdown requiring a rapid response, call us directly at (873)&nbsp;300-0232.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:1.8rem;padding:1.4rem;background:var(--paper);border:1px solid var(--line);border-radius:4px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.8rem;">Accepted formats</div>
+        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;background:var(--ink);color:#fff;padding:0.25rem 0.6rem;border-radius:2px;">STEP</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;background:var(--ink);color:#fff;padding:0.25rem 0.6rem;border-radius:2px;">IGES</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;background:var(--ink);color:#fff;padding:0.25rem 0.6rem;border-radius:2px;">DXF</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;background:var(--ink);color:#fff;padding:0.25rem 0.6rem;border-radius:2px;">DWG</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;background:var(--ink);color:#fff;padding:0.25rem 0.6rem;border-radius:2px;">PDF</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;background:var(--ink);color:#fff;padding:0.25rem 0.6rem;border-radius:2px;">JPG</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;background:var(--accent);color:#fff;padding:0.25rem 0.6rem;border-radius:2px;">+ paper sketch</span>
+        </div>
+        <p style="font-size:0.84rem;color:var(--muted);margin-top:0.9rem;line-height:1.55;">No drawing? A dimensioned sketch or a sample part is enough. We adapt.</p>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<div id="toast"><i data-lucide="check-circle" style="width:18px;height:18px;color:var(--accent);"></i>Request sent — we'll get back to you within 24 hours.</div>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Machinerie <span>MAG</span> Ltée</div>
+      <p>Precision machine shop serving manufacturers across Centre-du-Québec since 1998. CNC machining, turning, milling, welding and custom fabrication.</p>
+    </div>
+    <div class="foot-col"><h5>Services</h5>
+      <a href="services.html">CNC Machining</a><a href="services.html">Turning</a><a href="services.html">Milling</a><a href="services.html">Welding</a><a href="services.html">Prototyping</a>
+    </div>
+    <div class="foot-col"><h5>Company</h5>
+      <a href="about.html">About</a><a href="equipment.html">Equipment</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Get a Quote</a>
+    </div>
+    <div class="foot-col"><h5>Contact</h5>
+      <div class="foot-ct"><i data-lucide="map-pin"></i>2450, boul. Lemire,<br>Drummondville, QC J2B 8A9</div>
+      <div class="foot-ct"><i data-lucide="phone"></i><a href="tel:+18733000232" style="margin:0;">(873) 300-0232</a></div>
+      <div class="foot-ct"><i data-lucide="mail"></i><a href="mailto:info@machineriemag.com" style="margin:0;">info@machineriemag.com</a></div>
+      <div class="foot-ct"><i data-lucide="clock"></i>Mon–Fri: 7:00 AM–4:30 PM</div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Machinerie MAG Ltée. All rights reserved.</span>
+    <div style="display:flex;gap:1.5rem;"><a href="../contact.html" style="color:#8a919d;text-decoration:none;">Français</a><a href="contact.html" style="color:#8a919d;text-decoration:none;">Contact</a></div>
+  </div>
+</div></footer>
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<script>
+  lucide.createIcons();
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+
+  function showFileName(input){
+    const el=document.getElementById('file-name');
+    if(input.files.length){
+      el.textContent=Array.from(input.files).map(f=>f.name).join(', ');
+      el.style.display='block';
+    }
+  }
+
+  document.getElementById('contact-form').addEventListener('submit',function(e){
+    e.preventDefault();
+    const req=['nom','courriel','service','message'];
+    let ok=true;
+    req.forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el.value.trim()){ok=false;el.focus();el.style.borderColor='var(--accent)';}
+      else{el.style.borderColor='';}
+    });
+    if(!ok)return;
+    const toast=document.getElementById('toast');
+    toast.classList.add('show');
+    setTimeout(()=>toast.classList.remove('show'),4500);
+    this.reset();
+    document.getElementById('file-name').style.display='none';
+  });
+
+  if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('.reveal').forEach((el)=>gsap.fromTo(el,{opacity:0,y:26},{opacity:1,y:0,duration:.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+    gsap.from('.ph-tag',{opacity:0,y:16,duration:.6,delay:.1});
+    gsap.from('.ph-h1',{opacity:0,y:28,duration:.8,delay:.2});
+    gsap.from('.ph-sub',{opacity:0,y:18,duration:.6,delay:.4});
+  }else{document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none';});}
+</script>
+</body>
+</html>

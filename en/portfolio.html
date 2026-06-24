@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Machinerie MAG Ltée, Drummondville QC</title>
+  <meta name="description" content="Portfolio of machined parts by Machinerie MAG: CNC machining, turning, milling, TIG welding. Precision industrial parts, Drummondville, Centre-du-Québec.">
+  <link rel="canonical" href="https://www.machineriemag.com/en/portfolio.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#0f1115">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.machineriemag.com/en/portfolio.html">
+  <meta property="og:title" content="Portfolio — Machinerie MAG Ltée">
+  <meta property="og:description" content="Portfolio of machined parts: CNC, turning, milling, welding. Drummondville QC.">
+  <meta property="og:image" content="https://www.machineriemag.com/images/project-1.jpg">
+  <meta property="og:locale" content="en_CA">
+  <meta property="og:site_name" content="Machinerie MAG Ltée">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="fr-CA" href="https://www.machineriemag.com/realisations.html">
+  <link rel="alternate" hreflang="en-CA" href="https://www.machineriemag.com/en/portfolio.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.machineriemag.com/realisations.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <style>
+    :root{
+      --bg:#ffffff; --paper:#f4f5f7; --ink:#10131a; --steel:#2b3340; --steel-2:#4a5563;
+      --line:#dfe3e8; --line-2:#c9cfd7; --accent:#e8590c; --accent-d:#c2440a; --accent-soft:#fdecdf;
+      --muted:#6a7280; --dark:#0f1115; --dark-2:#171a21;
+    }
+    html{scroll-behavior:smooth;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;}
+    ::selection{background:var(--accent);color:#fff;}
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);transition:.3s;}
+    #nav.scrolled{box-shadow:0 1px 20px rgba(16,19,26,0.06);}
+    .nav-in{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.85rem 2rem;}
+    .brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.15rem;letter-spacing:-0.02em;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:0.6rem;}
+    .brand .mark{width:34px;height:34px;background:var(--ink);color:var(--accent);display:grid;place-items:center;font-weight:900;font-size:0.95rem;clip-path:polygon(0 0,100% 0,100% 72%,72% 100%,0 100%);}
+    .brand span{color:var(--accent);}
+    .nav-links{display:flex;align-items:center;gap:0.35rem;}
+    .nl{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.82rem;color:var(--steel);padding:0.5rem 0.85rem;text-decoration:none;border-radius:3px;transition:.2s;}
+    .nl:hover{color:var(--ink);background:var(--paper);}
+    .nl.active{color:var(--accent);}
+    .nav-cta{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.82rem;background:var(--accent);color:#fff;padding:0.6rem 1.1rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.4rem;transition:.2s;margin-left:0.5rem;}
+    .nav-cta:hover{background:var(--accent-d);}
+    .lang{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;color:var(--muted);text-decoration:none;padding:0.3rem 0.4rem;border:1px solid var(--line-2);border-radius:3px;margin-left:0.5rem;}
+    .lang:hover{color:var(--ink);border-color:var(--steel);}
+    #burger{display:none;background:none;border:none;color:var(--ink);cursor:pointer;}
+    #mob{display:none;position:fixed;inset:0;z-index:99;background:var(--dark);padding:5rem 2rem;flex-direction:column;gap:0.5rem;}
+    #mob.open{display:flex;}
+    #mob a{font-family:'Archivo',sans-serif;font-weight:700;font-size:1.6rem;color:#fff;text-decoration:none;padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+    #mob a span{color:var(--accent);}
+    @media(max-width:940px){.nav-links{display:none;}#burger{display:block;}}
+    .page-hero{background:var(--dark);padding:9rem 0 5.5rem;position:relative;overflow:hidden;}
+    .page-hero::after{content:'';position:absolute;right:-4rem;top:50%;transform:translateY(-50%);width:420px;height:420px;border:1px solid rgba(232,89,12,0.15);border-radius:50%;pointer-events:none;}
+    .page-hero::before{content:'';position:absolute;right:2rem;top:50%;transform:translateY(-50%);width:260px;height:260px;border:1px solid rgba(232,89,12,0.1);border-radius:50%;pointer-events:none;}
+    .ph-tag{display:inline-flex;align-items:center;gap:0.6rem;font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem;}
+    .ph-tag::before{content:'';width:28px;height:2px;background:var(--accent);}
+    .ph-h1{font-family:'Archivo',sans-serif;font-weight:900;font-size:clamp(2.4rem,4.8vw,4rem);line-height:1;letter-spacing:-0.03em;color:#fff;margin-bottom:1.2rem;}
+    .ph-h1 em{font-style:normal;color:var(--accent);}
+    .ph-sub{font-size:1.05rem;line-height:1.7;color:#aab1bd;max-width:560px;}
+    .wrap{max-width:1280px;margin:0 auto;padding:0 2rem;}
+    section{padding:6.5rem 0;}
+    .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:0.7rem;margin-bottom:1rem;}
+    .eyebrow::before{content:'';width:24px;height:2px;background:var(--accent);}
+    .s-title{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(1.9rem,3.4vw,2.7rem);line-height:1.05;letter-spacing:-0.02em;color:var(--ink);}
+    .filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin:2rem 0 2.5rem;}
+    .filt{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.5rem 1rem;border:1px solid var(--line-2);border-radius:3px;cursor:pointer;background:none;color:var(--muted);transition:.2s;}
+    .filt:hover,.filt.on{background:var(--ink);color:#fff;border-color:var(--ink);}
+    .port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--line);border:1px solid var(--line);}
+    .port-tile{position:relative;aspect-ratio:1;overflow:hidden;background:var(--ink);cursor:pointer;}
+    .port-tile img{width:100%;height:100%;object-fit:cover;transition:.5s;opacity:.92;}
+    .port-tile:hover img{transform:scale(1.06);opacity:1;}
+    .port-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:1.4rem;background:linear-gradient(to top,rgba(15,17,21,0.94) 0%,rgba(15,17,21,0.3) 60%,transparent 100%);opacity:0;transition:.3s;}
+    .port-tile:hover .port-ov{opacity:1;}
+    .port-ov-always{position:absolute;left:0;right:0;bottom:0;padding:1.2rem 1.4rem;background:linear-gradient(to top,rgba(15,17,21,0.88),transparent);}
+    .port-ov-always .t{font-family:'Archivo',sans-serif;font-weight:700;color:#fff;font-size:0.95rem;}
+    .port-ov-always .m{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--accent);margin-top:0.2rem;letter-spacing:0.04em;}
+    .port-tag{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;background:var(--accent);color:#fff;padding:0.25rem 0.55rem;border-radius:2px;margin-bottom:0.6rem;}
+    .port-detail{font-size:0.86rem;color:#cfd4db;line-height:1.5;}
+    @media(max-width:760px){.port-grid{grid-template-columns:1fr 1fr;}}
+    @media(max-width:480px){.port-grid{grid-template-columns:1fr;}}
+    #lb{display:none;position:fixed;inset:0;z-index:200;background:rgba(10,12,16,0.95);align-items:center;justify-content:center;padding:2rem;}
+    #lb.open{display:flex;}
+    #lb-img{max-width:min(880px,90vw);max-height:80vh;object-fit:contain;border-radius:3px;}
+    #lb-close{position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;cursor:pointer;}
+    #lb-meta{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);text-align:center;}
+    #lb-meta .t{font-family:'Archivo',sans-serif;font-weight:700;color:#fff;font-size:1rem;}
+    #lb-meta .m{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--accent);letter-spacing:0.08em;margin-top:0.25rem;}
+    #cta{background:var(--ink);color:#fff;text-align:center;}
+    #cta .s-title{color:#fff;max-width:720px;margin:0 auto 1.2rem;}
+    #cta p{color:#aab1bd;max-width:540px;margin:0 auto 2.3rem;font-size:1.05rem;}
+    .btn-p{font-family:'Archivo',sans-serif;font-weight:700;font-size:0.9rem;background:var(--accent);color:#fff;padding:0.95rem 1.8rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;transition:.2s;}
+    .btn-p:hover{background:var(--accent-d);transform:translateY(-1px);}
+    .btn-g{font-family:'Archivo',sans-serif;font-weight:600;font-size:0.9rem;color:#fff;padding:0.95rem 1.6rem;border-radius:3px;text-decoration:none;display:inline-flex;align-items:center;gap:0.5rem;border:1px solid rgba(255,255,255,0.22);transition:.2s;}
+    .btn-g:hover{border-color:var(--accent);color:var(--accent);}
+    footer{background:var(--dark);color:#fff;padding:4.5rem 0 2rem;}
+    .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.3fr;gap:3rem;margin-bottom:3rem;}
+    .foot-brand{font-family:'Archivo',sans-serif;font-weight:900;font-size:1.3rem;margin-bottom:0.8rem;}
+    .foot-brand span{color:var(--accent);}
+    .foot p{color:#8a919d;font-size:0.88rem;line-height:1.6;}
+    .foot-col h5{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.1rem;}
+    .foot-col a{display:block;color:#aab1bd;font-size:0.9rem;text-decoration:none;margin-bottom:0.6rem;transition:.2s;}
+    .foot-col a:hover{color:#fff;}
+    .foot-ct{display:flex;gap:0.6rem;color:#aab1bd;font-size:0.9rem;margin-bottom:0.8rem;align-items:flex-start;}
+    .foot-ct i{color:var(--accent);width:16px;height:16px;flex-shrink:0;margin-top:3px;}
+    .foot-bot{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.6rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;color:#6a7280;font-size:0.78rem;}
+    @media(max-width:900px){.foot-grid{grid-template-columns:1fr 1fr;gap:2rem;}}
+    .reveal{opacity:0;transform:translateY(26px);}
+  </style>
+</head>
+<body>
+
+<nav id="nav"><div class="nav-in">
+  <a href="index.html" class="brand"><span class="mark">M</span>Machinerie <span>MAG</span></a>
+  <div class="nav-links">
+    <a href="index.html" class="nl">Home</a>
+    <a href="services.html" class="nl">Services</a>
+    <a href="equipment.html" class="nl">Equipment</a>
+    <a href="portfolio.html" class="nl active">Portfolio</a>
+    <a href="about.html" class="nl">About</a>
+    <a href="contact.html" class="nav-cta"><i data-lucide="file-text" style="width:15px;height:15px;"></i>Get a Quote</a>
+    <a href="../realisations.html" class="lang">FR</a>
+  </div>
+  <button id="burger" onclick="document.getElementById('mob').classList.toggle('open')"><i data-lucide="menu" style="width:26px;height:26px;"></i></button>
+</div></nav>
+<div id="mob">
+  <button onclick="document.getElementById('mob').classList.remove('open')" style="position:absolute;top:1.5rem;right:1.5rem;background:none;border:none;color:#fff;"><i data-lucide="x" style="width:28px;height:28px;"></i></button>
+  <a href="index.html">Home</a><a href="services.html">Services</a><a href="equipment.html">Equipment</a>
+  <a href="portfolio.html">Portfolio</a><a href="about.html">About</a><a href="contact.html"><span>Get a Quote</span></a>
+  <a href="../realisations.html" style="font-size:1rem;color:#8a919d;border:none;">Français</a>
+</div>
+
+<div class="page-hero"><div class="wrap">
+  <div class="ph-tag">Portfolio</div>
+  <h1 class="ph-h1">Parts that hold up<br>in <em>production.</em></h1>
+  <p class="ph-sub">A selection of work from the shop — CNC machining, turning, milling, welding and custom fabrication for manufacturers across Centre-du-Québec.</p>
+</div></div>
+
+<section><div class="wrap">
+  <div class="eyebrow">Completed work</div>
+  <h2 class="s-title">Selected projects</h2>
+
+  <div class="filter-bar">
+    <button class="filt on" data-cat="all">All</button>
+    <button class="filt" data-cat="cnc">CNC Machining</button>
+    <button class="filt" data-cat="turning">Turning</button>
+    <button class="filt" data-cat="milling">Milling</button>
+    <button class="filt" data-cat="welding">Welding</button>
+    <button class="filt" data-cat="fabrication">Fabrication</button>
+  </div>
+
+  <div class="port-grid" id="port-grid">
+
+    <div class="port-tile reveal" data-cat="cnc"
+         data-title="Precision machined components" data-tag="CNC MACHINING · 6061 ALUMINUM"
+         data-detail="Run of 24 parts. Tolerance ±0.01 mm. 4-axis centres."
+         onclick="openLb(this)">
+      <img src="../images/project-1.jpg" alt="CNC machined aluminum parts" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">CNC</div>
+        <div class="port-detail">Run of 24 parts. Tolerance ±0.01 mm.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Precision components</div>
+        <div class="m">CNC MACHINING · ALUMINUM</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="fabrication"
+         data-title="Functional pre-production parts" data-tag="PROTOTYPING · 7075 ALUMINUM"
+         data-detail="Pre-production run of 10 units for design validation. 5-day turnaround."
+         onclick="openLb(this)">
+      <img src="../images/project-2.jpg" alt="Functional aluminum prototypes" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">PROTO</div>
+        <div class="port-detail">10 units for design validation.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Functional pre-production run</div>
+        <div class="m">PROTOTYPING · ALUMINUM</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="turning"
+         data-title="Precision shafts and bushings" data-tag="CNC TURNING · 4140 STEEL"
+         data-detail="Drive shafts Ø 45 mm × 380 mm. Ra 1.6 µm. Run of 12."
+         onclick="openLb(this)">
+      <img src="../images/project-3.jpg" alt="CNC turned steel shafts" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">TURNING</div>
+        <div class="port-detail">Drive shafts Ø 45 mm. Run of 12.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Shafts &amp; bushings</div>
+        <div class="m">CNC TURNING · 4140 STEEL</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="milling"
+         data-title="Production tooling jig" data-tag="MILLING · A36 STEEL"
+         data-detail="Drill jig for assembly line. Tolerance ±0.02 mm. One-off."
+         onclick="openLb(this)">
+      <img src="../images/project-4.jpg" alt="Custom milled tooling jig" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">MILLING</div>
+        <div class="port-detail">Drill jig for assembly line.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Tooling jig</div>
+        <div class="m">MILLING · STEEL</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="fabrication"
+         data-title="Hard-to-find replacement parts" data-tag="REPRODUCTION · 1018 STEEL / BRASS"
+         data-detail="Reverse engineering and reproduction of obsolete components. 6 part numbers."
+         onclick="openLb(this)">
+      <img src="../images/project-5.jpg" alt="Custom reproduced replacement parts" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">REPRODUCTION</div>
+        <div class="port-detail">Reverse-engineered. 6 part numbers.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Replacement parts</div>
+        <div class="m">REPRODUCTION · MULTI-MATERIAL</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="cnc"
+         data-title="Fine-tolerance sensor housings" data-tag="CNC MACHINING · 316L STAINLESS"
+         data-detail="Sensor housings in 316L stainless. Tolerance ±0.008 mm. Batch of 50."
+         onclick="openLb(this)">
+      <img src="../images/project-6.jpg" alt="Fine-tolerance stainless sensor housings" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">CNC</div>
+        <div class="port-detail">316L stainless sensor housings. Batch of 50.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Fine-tolerance components</div>
+        <div class="m">CNC MACHINING · 316L STAINLESS</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="welding"
+         data-title="Stainless steel welded assembly" data-tag="TIG WELDING · 304 STAINLESS"
+         data-detail="Conveyor frame in 304 stainless. TIG welding, build-up and straightening."
+         onclick="openLb(this)">
+      <img src="../images/service-soudure.jpg" alt="TIG welded stainless steel assembly" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">WELDING</div>
+        <div class="port-detail">Conveyor frame. TIG, straightening.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Welded assembly</div>
+        <div class="m">TIG WELDING · 304 STAINLESS</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="cnc"
+         data-title="CNC machining centre in operation" data-tag="CNC MACHINING · ALUMINUM / STEEL"
+         data-detail="Recurring production on 3-axis centre. Batches of 25 to 200 parts."
+         onclick="openLb(this)">
+      <img src="../images/service-cnc.jpg" alt="3-axis CNC machining centre in operation" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">CNC</div>
+        <div class="port-detail">Recurring production, batches 25–200 parts.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Recurring CNC production</div>
+        <div class="m">CNC MACHINING · SERIES</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="turning"
+         data-title="Precision turned brass fittings" data-tag="CNC TURNING · C360 BRASS"
+         data-detail="Threaded fittings and bushings in brass. NPT 1/2\" threading. Batch of 100."
+         onclick="openLb(this)">
+      <img src="../images/service-tournage.jpg" alt="CNC turned brass fittings" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">TURNING</div>
+        <div class="port-detail">Brass NPT fittings. Batch of 100.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Threaded brass fittings</div>
+        <div class="m">CNC TURNING · BRASS</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="milling"
+         data-title="Precision surface milling" data-tag="MILLING · 6061 ALUMINUM"
+         data-detail="Mounting plates with reference surfaces. Flatness ≤0.02 mm."
+         onclick="openLb(this)">
+      <img src="../images/service-fraisage.jpg" alt="Precision surface milling on aluminum" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">MILLING</div>
+        <div class="port-detail">Mounting plates. Flatness ≤0.02 mm.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Mounting plates</div>
+        <div class="m">MILLING · ALUMINUM</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="fabrication"
+         data-title="Custom production parts" data-tag="FABRICATION · MULTI-MATERIAL"
+         data-detail="Various components fabricated for the manufacturing industry."
+         onclick="openLb(this)">
+      <img src="../images/service-pieces.jpg" alt="Custom industrial parts fabricated in shop" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">FABRICATION</div>
+        <div class="port-detail">Various components for industry.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">Custom fabrication</div>
+        <div class="m">MULTI-MATERIAL · SERIES</div>
+      </div>
+    </div>
+
+    <div class="port-tile reveal" data-cat="cnc"
+         data-title="CMM dimensional inspection" data-tag="CMM INSPECTION · TOLERANCE ±0.003 mm"
+         data-detail="Every batch verified by CMM before delivery. Dimensional report provided."
+         onclick="openLb(this)">
+      <img src="../images/why-precision.jpg" alt="CMM dimensional inspection in machine shop" loading="lazy" width="600" height="600">
+      <div class="port-ov">
+        <div class="port-tag">INSPECTION</div>
+        <div class="port-detail">Every batch CMM-verified. Report included.</div>
+      </div>
+      <div class="port-ov-always">
+        <div class="t">CMM dimensional inspection</div>
+        <div class="m">INSPECTION · ±0.003 mm</div>
+      </div>
+    </div>
+
+  </div>
+</div></section>
+
+<div id="lb" onclick="if(event.target===this)closeLb()">
+  <button id="lb-close" onclick="closeLb()"><i data-lucide="x" style="width:32px;height:32px;"></i></button>
+  <img id="lb-img" src="" alt="">
+  <div id="lb-meta">
+    <div class="t" id="lb-t"></div>
+    <div class="m" id="lb-m"></div>
+  </div>
+</div>
+
+<section id="cta"><div class="wrap">
+  <div class="eyebrow" style="justify-content:center;">Your next project</div>
+  <h2 class="s-title">We machine what<br>you need.</h2>
+  <p>Send us your drawing or a sample part. Free quote, response in under 24 hours.</p>
+  <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+    <a href="contact.html" class="btn-p"><i data-lucide="file-text" style="width:16px;height:16px;"></i>Request a Quote</a>
+    <a href="tel:+18733000232" class="btn-g" style="border-color:rgba(255,255,255,0.3);"><i data-lucide="phone" style="width:16px;height:16px;"></i>(873) 300-0232</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-brand">Machinerie <span>MAG</span> Ltée</div>
+      <p>Precision machine shop serving manufacturers across Centre-du-Québec since 1998. CNC machining, turning, milling, welding and custom fabrication.</p>
+    </div>
+    <div class="foot-col"><h5>Services</h5>
+      <a href="services.html">CNC Machining</a><a href="services.html">Turning</a><a href="services.html">Milling</a><a href="services.html">Welding</a><a href="services.html">Prototyping</a>
+    </div>
+    <div class="foot-col"><h5>Company</h5>
+      <a href="about.html">About</a><a href="equipment.html">Equipment</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Get a Quote</a>
+    </div>
+    <div class="foot-col"><h5>Contact</h5>
+      <div class="foot-ct"><i data-lucide="map-pin"></i>2450, boul. Lemire,<br>Drummondville, QC J2B 8A9</div>
+      <div class="foot-ct"><i data-lucide="phone"></i><a href="tel:+18733000232" style="margin:0;">(873) 300-0232</a></div>
+      <div class="foot-ct"><i data-lucide="mail"></i><a href="mailto:info@machineriemag.com" style="margin:0;">info@machineriemag.com</a></div>
+      <div class="foot-ct"><i data-lucide="clock"></i>Mon–Fri: 7:00 AM–4:30 PM</div>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© 2026 Machinerie MAG Ltée. All rights reserved.</span>
+    <div style="display:flex;gap:1.5rem;"><a href="../realisations.html" style="color:#8a919d;text-decoration:none;">Français</a><a href="contact.html" style="color:#8a919d;text-decoration:none;">Contact</a></div>
+  </div>
+</div></footer>
+
+<noscript><style>.reveal{opacity:1!important;transform:none!important;}</style></noscript>
+<script>
+  lucide.createIcons();
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>20));
+
+  document.querySelectorAll('.filt').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.filt').forEach(b=>b.classList.remove('on'));
+      btn.classList.add('on');
+      const cat=btn.dataset.cat;
+      document.querySelectorAll('.port-tile').forEach(tile=>{
+        tile.style.display=(cat==='all'||tile.dataset.cat===cat)?'':'none';
+      });
+    });
+  });
+
+  function openLb(el){
+    const lb=document.getElementById('lb');
+    document.getElementById('lb-img').src=el.querySelector('img').src;
+    document.getElementById('lb-img').alt=el.querySelector('img').alt;
+    document.getElementById('lb-t').textContent=el.dataset.title;
+    document.getElementById('lb-m').textContent=el.dataset.tag;
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeLb(){
+    document.getElementById('lb').classList.remove('open');
+    document.body.style.overflow='';
+  }
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLb();});
+
+  if(typeof gsap!=='undefined'&&typeof ScrollTrigger!=='undefined'){
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('.reveal').forEach((el)=>gsap.fromTo(el,{opacity:0,y:26},{opacity:1,y:0,duration:.6,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 88%',once:true}}));
+    gsap.from('.ph-tag',{opacity:0,y:16,duration:.6,delay:.1});
+    gsap.from('.ph-h1',{opacity:0,y:28,duration:.8,delay:.2});
+    gsap.from('.ph-sub',{opacity:0,y:18,duration:.6,delay:.4});
+  }else{document.querySelectorAll('.reveal').forEach(e=>{e.style.opacity=1;e.style.transform='none';});}
+</script>
+</body>
+</html>
